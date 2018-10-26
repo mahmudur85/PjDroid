@@ -1,6 +1,6 @@
-# PjDroid
+# PjDroid [experimental]
 
-An Android Library for PJSIP PJSUA2 API
+PJSIP PJSUA2 api library for Android
 
 ## How to use PjDroid
 
