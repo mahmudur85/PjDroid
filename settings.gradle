@@ -1,1 +1,1 @@
-include ':pjdroidsample', ':libpjdroid'
+include ':sample', ':PjDroid'
