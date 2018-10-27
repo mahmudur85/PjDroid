@@ -6,7 +6,7 @@ PJSIP PJSUA2 api library for Android
 
 Add this to your app's build.gradle file in dependencies
 
-`implementation 'com.mahmudur85.lib:PjDroid:0.0.1'`
+`implementation 'com.mahmudur85.lib:PjDroid:0.0.2'`
 
 ## Feature
 
