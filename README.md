@@ -10,12 +10,14 @@ Add this to your app's build.gradle file in dependencies
 
 ## Feature
 
+Build from PJSIP-2.8
+
 Supported architectures
 
 - amreabi-v7a
 - arm64-v8a
 
-Support Transport
+Supported Transport
 
 - UDP
 - TCP
