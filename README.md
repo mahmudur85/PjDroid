@@ -32,3 +32,6 @@ Add support for
 - x86
 - x86_x64
 
+## License
+
+The license is Apache 2.0.
