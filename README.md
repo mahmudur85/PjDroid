@@ -31,7 +31,7 @@ Supports SRTP
 
 ## TODO
 
-- Support for x86 & x86_x64 architectures
+- ~~Support for x86 & x86_x64 architectures~~
 - Video Call support
 
 ## License
