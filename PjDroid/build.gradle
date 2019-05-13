@@ -26,7 +26,7 @@ ext {
     siteUrl = 'https://github.com/mahmudur85/PjDroid'
     gitUrl = 'https://github.com/mahmudur85/PjDroid.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'mahmudur85'
     developerName = 'Khandker Mahmudur Rahman'
@@ -38,13 +38,13 @@ ext {
 }
 
 ext.versions = [
-        'minSdk'        : 21,
+        'minSdk'        : 19,
         'compileSdk'    : 28,
         'targetSdk'     : 28,
         'buildTools'    : '28.0.3',
 
         'release'       : libraryVersion,
-        'code'          : 3,
+        'code'          : 4,
 ]
 
 android {
