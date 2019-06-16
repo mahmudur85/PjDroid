@@ -243,11 +243,11 @@ public class AccountNatConfig extends PersistentObject {
     return pjsua2JNI.AccountNatConfig_udpKaData_get(swigCPtr, this);
   }
 
-  public void readObject(ContainerNode node) throws java.lang.Exception {
+  public void readObject(ContainerNode node) throws Exception {
     pjsua2JNI.AccountNatConfig_readObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 
-  public void writeObject(ContainerNode node) throws java.lang.Exception {
+  public void writeObject(ContainerNode node) throws Exception {
     pjsua2JNI.AccountNatConfig_writeObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 

@@ -51,11 +51,11 @@ public class AccountMwiConfig extends PersistentObject {
     return pjsua2JNI.AccountMwiConfig_expirationSec_get(swigCPtr, this);
   }
 
-  public void readObject(ContainerNode node) throws java.lang.Exception {
+  public void readObject(ContainerNode node) throws Exception {
     pjsua2JNI.AccountMwiConfig_readObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 
-  public void writeObject(ContainerNode node) throws java.lang.Exception {
+  public void writeObject(ContainerNode node) throws Exception {
     pjsua2JNI.AccountMwiConfig_writeObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 

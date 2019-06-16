@@ -110,11 +110,11 @@ public class AccountMediaConfig extends PersistentObject {
     return (cPtr == 0) ? null : new RtcpFbConfig(cPtr, false);
   }
 
-  public void readObject(ContainerNode node) throws java.lang.Exception {
+  public void readObject(ContainerNode node) throws Exception {
     pjsua2JNI.AccountMediaConfig_readObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 
-  public void writeObject(ContainerNode node) throws java.lang.Exception {
+  public void writeObject(ContainerNode node) throws Exception {
     pjsua2JNI.AccountMediaConfig_writeObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 

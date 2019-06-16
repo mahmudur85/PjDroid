@@ -6,7 +6,7 @@ PJSIP PJSUA2 api library for Android
 
 Add this to your app's build.gradle file in dependencies
 
-`implementation 'com.mahmudur85.lib:PjDroid:0.0.2'`
+`implementation 'com.mahmudur85.lib:PjDroid:2.0.0'`
 
 ## How run the [sample](https://github.com/mahmudur85/PjDroid/tree/master/sample) project
 
@@ -14,7 +14,7 @@ This [issue](https://github.com/mahmudur85/PjDroid/issues/1) might help to run t
 
 ## Feature
 
-Build from PJSIP-2.8
+Build from PJSIP-2.9
 
 Supported architectures
 
@@ -32,7 +32,7 @@ Supports SRTP
 ## TODO
 
 - ~~Support for x86 & x86_x64 architectures~~
-- Video Call support
+- ~~Video Call support~~
 
 ## License
 

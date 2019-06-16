@@ -50,17 +50,17 @@ public class Endpoint {
     pjsua2JNI.Endpoint_change_ownership(this, swigCPtr, true);
   }
 
-  public void libDestroy(long prmFlags) throws java.lang.Exception {
+  public void libDestroy(long prmFlags) throws Exception {
 	Runtime.getRuntime().gc();
 	libDestroy_(prmFlags);
   }
 
-  public void libDestroy() throws java.lang.Exception {
+  public void libDestroy() throws Exception {
 	Runtime.getRuntime().gc();
 	libDestroy_();
   }
 
-  public static Endpoint instance() throws java.lang.Exception {
+  public static Endpoint instance() throws Exception {
     return new Endpoint(pjsua2JNI.Endpoint_instance(), false);
   }
 
@@ -73,7 +73,7 @@ public class Endpoint {
     return new Version(pjsua2JNI.Endpoint_libVersion(swigCPtr, this), true);
   }
 
-  public void libCreate() throws java.lang.Exception {
+  public void libCreate() throws Exception {
     pjsua2JNI.Endpoint_libCreate(swigCPtr, this);
   }
 
@@ -81,15 +81,15 @@ public class Endpoint {
     return pjsua_state.swigToEnum(pjsua2JNI.Endpoint_libGetState(swigCPtr, this));
   }
 
-  public void libInit(EpConfig prmEpConfig) throws java.lang.Exception {
+  public void libInit(EpConfig prmEpConfig) throws Exception {
     pjsua2JNI.Endpoint_libInit(swigCPtr, this, EpConfig.getCPtr(prmEpConfig), prmEpConfig);
   }
 
-  public void libStart() throws java.lang.Exception {
+  public void libStart() throws Exception {
     pjsua2JNI.Endpoint_libStart(swigCPtr, this);
   }
 
-  public void libRegisterThread(String name) throws java.lang.Exception {
+  public void libRegisterThread(String name) throws Exception {
     pjsua2JNI.Endpoint_libRegisterThread(swigCPtr, this, name);
   }
 
@@ -105,11 +105,11 @@ public class Endpoint {
     return pjsua2JNI.Endpoint_libHandleEvents(swigCPtr, this, msec_timeout);
   }
 
-  public void libDestroy_(long prmFlags) throws java.lang.Exception {
+  public void libDestroy_(long prmFlags) throws Exception {
     pjsua2JNI.Endpoint_libDestroy___SWIG_0(swigCPtr, this, prmFlags);
   }
 
-  public void libDestroy_() throws java.lang.Exception {
+  public void libDestroy_() throws Exception {
     pjsua2JNI.Endpoint_libDestroy___SWIG_1(swigCPtr, this);
   }
 
@@ -133,7 +133,7 @@ public class Endpoint {
     return pjsua2JNI.Endpoint_utilVerifyUri(swigCPtr, this, prmUri);
   }
 
-  public SWIGTYPE_p_void utilTimerSchedule(long prmMsecDelay, SWIGTYPE_p_void prmUserData) throws java.lang.Exception {
+  public SWIGTYPE_p_void utilTimerSchedule(long prmMsecDelay, SWIGTYPE_p_void prmUserData) throws Exception {
     long cPtr = pjsua2JNI.Endpoint_utilTimerSchedule(swigCPtr, this, prmMsecDelay, SWIGTYPE_p_void.getCPtr(prmUserData));
     return (cPtr == 0) ? null : new SWIGTYPE_p_void(cPtr, false);
   }
@@ -146,55 +146,55 @@ public class Endpoint {
     pjsua2JNI.Endpoint_utilAddPendingJob(swigCPtr, this, PendingJob.getCPtr(job), job);
   }
 
-  public IntVector utilSslGetAvailableCiphers() throws java.lang.Exception {
+  public IntVector utilSslGetAvailableCiphers() throws Exception {
     return new IntVector(pjsua2JNI.Endpoint_utilSslGetAvailableCiphers(swigCPtr, this), true);
   }
 
-  public void natDetectType() throws java.lang.Exception {
+  public void natDetectType() throws Exception {
     pjsua2JNI.Endpoint_natDetectType(swigCPtr, this);
   }
 
-  public pj_stun_nat_type natGetType() throws java.lang.Exception {
+  public pj_stun_nat_type natGetType() throws Exception {
     return pj_stun_nat_type.swigToEnum(pjsua2JNI.Endpoint_natGetType(swigCPtr, this));
   }
 
-  public void natUpdateStunServers(StringVector prmServers, boolean prmWait) throws java.lang.Exception {
+  public void natUpdateStunServers(StringVector prmServers, boolean prmWait) throws Exception {
     pjsua2JNI.Endpoint_natUpdateStunServers(swigCPtr, this, StringVector.getCPtr(prmServers), prmServers, prmWait);
   }
 
-  public void natCheckStunServers(StringVector prmServers, boolean prmWait, SWIGTYPE_p_void prmUserData) throws java.lang.Exception {
+  public void natCheckStunServers(StringVector prmServers, boolean prmWait, SWIGTYPE_p_void prmUserData) throws Exception {
     pjsua2JNI.Endpoint_natCheckStunServers(swigCPtr, this, StringVector.getCPtr(prmServers), prmServers, prmWait, SWIGTYPE_p_void.getCPtr(prmUserData));
   }
 
-  public void natCancelCheckStunServers(SWIGTYPE_p_void token, boolean notify_cb) throws java.lang.Exception {
+  public void natCancelCheckStunServers(SWIGTYPE_p_void token, boolean notify_cb) throws Exception {
     pjsua2JNI.Endpoint_natCancelCheckStunServers__SWIG_0(swigCPtr, this, SWIGTYPE_p_void.getCPtr(token), notify_cb);
   }
 
-  public void natCancelCheckStunServers(SWIGTYPE_p_void token) throws java.lang.Exception {
+  public void natCancelCheckStunServers(SWIGTYPE_p_void token) throws Exception {
     pjsua2JNI.Endpoint_natCancelCheckStunServers__SWIG_1(swigCPtr, this, SWIGTYPE_p_void.getCPtr(token));
   }
 
-  public int transportCreate(pjsip_transport_type_e type, TransportConfig cfg) throws java.lang.Exception {
+  public int transportCreate(pjsip_transport_type_e type, TransportConfig cfg) throws Exception {
     return pjsua2JNI.Endpoint_transportCreate(swigCPtr, this, type.swigValue(), TransportConfig.getCPtr(cfg), cfg);
   }
 
-  public IntVector transportEnum() throws java.lang.Exception {
+  public IntVector transportEnum() throws Exception {
     return new IntVector(pjsua2JNI.Endpoint_transportEnum(swigCPtr, this), true);
   }
 
-  public TransportInfo transportGetInfo(int id) throws java.lang.Exception {
+  public TransportInfo transportGetInfo(int id) throws Exception {
     return new TransportInfo(pjsua2JNI.Endpoint_transportGetInfo(swigCPtr, this, id), true);
   }
 
-  public void transportSetEnable(int id, boolean enabled) throws java.lang.Exception {
+  public void transportSetEnable(int id, boolean enabled) throws Exception {
     pjsua2JNI.Endpoint_transportSetEnable(swigCPtr, this, id, enabled);
   }
 
-  public void transportClose(int id) throws java.lang.Exception {
+  public void transportClose(int id) throws Exception {
     pjsua2JNI.Endpoint_transportClose(swigCPtr, this, id);
   }
 
-  public void transportShutdown(SWIGTYPE_p_void tp) throws java.lang.Exception {
+  public void transportShutdown(SWIGTYPE_p_void tp) throws Exception {
     pjsua2JNI.Endpoint_transportShutdown(swigCPtr, this, SWIGTYPE_p_void.getCPtr(tp));
   }
 
@@ -222,8 +222,16 @@ public class Endpoint {
     return pjsua2JNI.Endpoint_mediaActivePorts(swigCPtr, this);
   }
 
-  public AudioMediaVector mediaEnumPorts() throws java.lang.Exception {
+  public AudioMediaVector mediaEnumPorts() throws Exception {
     return new AudioMediaVector(pjsua2JNI.Endpoint_mediaEnumPorts(swigCPtr, this), false);
+  }
+
+  public AudioMediaVector2 mediaEnumPorts2() throws Exception {
+    return new AudioMediaVector2(pjsua2JNI.Endpoint_mediaEnumPorts2(swigCPtr, this), true);
+  }
+
+  public VideoMediaVector mediaEnumVidPorts() throws Exception {
+    return new VideoMediaVector(pjsua2JNI.Endpoint_mediaEnumVidPorts(swigCPtr, this), true);
   }
 
   public AudDevManager audDevManager() {
@@ -234,47 +242,55 @@ public class Endpoint {
     return new VidDevManager(pjsua2JNI.Endpoint_vidDevManager(swigCPtr, this), false);
   }
 
-  public CodecInfoVector codecEnum() throws java.lang.Exception {
+  public CodecInfoVector codecEnum() throws Exception {
     return new CodecInfoVector(pjsua2JNI.Endpoint_codecEnum(swigCPtr, this), false);
   }
 
-  public void codecSetPriority(String codec_id, short priority) throws java.lang.Exception {
+  public CodecInfoVector2 codecEnum2() throws Exception {
+    return new CodecInfoVector2(pjsua2JNI.Endpoint_codecEnum2(swigCPtr, this), true);
+  }
+
+  public void codecSetPriority(String codec_id, short priority) throws Exception {
     pjsua2JNI.Endpoint_codecSetPriority(swigCPtr, this, codec_id, priority);
   }
 
-  public CodecParam codecGetParam(String codec_id) throws java.lang.Exception {
+  public CodecParam codecGetParam(String codec_id) throws Exception {
     return new CodecParam(pjsua2JNI.Endpoint_codecGetParam(swigCPtr, this, codec_id), true);
   }
 
-  public void codecSetParam(String codec_id, CodecParam param) throws java.lang.Exception {
+  public void codecSetParam(String codec_id, CodecParam param) throws Exception {
     pjsua2JNI.Endpoint_codecSetParam(swigCPtr, this, codec_id, CodecParam.getCPtr(param), param);
   }
 
-  public CodecInfoVector videoCodecEnum() throws java.lang.Exception {
+  public CodecInfoVector videoCodecEnum() throws Exception {
     return new CodecInfoVector(pjsua2JNI.Endpoint_videoCodecEnum(swigCPtr, this), false);
   }
 
-  public void videoCodecSetPriority(String codec_id, short priority) throws java.lang.Exception {
+  public CodecInfoVector2 videoCodecEnum2() throws Exception {
+    return new CodecInfoVector2(pjsua2JNI.Endpoint_videoCodecEnum2(swigCPtr, this), true);
+  }
+
+  public void videoCodecSetPriority(String codec_id, short priority) throws Exception {
     pjsua2JNI.Endpoint_videoCodecSetPriority(swigCPtr, this, codec_id, priority);
   }
 
-  public VidCodecParam getVideoCodecParam(String codec_id) throws java.lang.Exception {
+  public VidCodecParam getVideoCodecParam(String codec_id) throws Exception {
     return new VidCodecParam(pjsua2JNI.Endpoint_getVideoCodecParam(swigCPtr, this, codec_id), true);
   }
 
-  public void setVideoCodecParam(String codec_id, VidCodecParam param) throws java.lang.Exception {
+  public void setVideoCodecParam(String codec_id, VidCodecParam param) throws Exception {
     pjsua2JNI.Endpoint_setVideoCodecParam(swigCPtr, this, codec_id, VidCodecParam.getCPtr(param), param);
   }
 
-  public void resetVideoCodecParam(String codec_id) throws java.lang.Exception {
+  public void resetVideoCodecParam(String codec_id) throws Exception {
     pjsua2JNI.Endpoint_resetVideoCodecParam(swigCPtr, this, codec_id);
   }
 
-  public StringVector srtpCryptoEnum() throws java.lang.Exception {
+  public StringVector srtpCryptoEnum() throws Exception {
     return new StringVector(pjsua2JNI.Endpoint_srtpCryptoEnum(swigCPtr, this), true);
   }
 
-  public void handleIpChange(IpChangeParam param) throws java.lang.Exception {
+  public void handleIpChange(IpChangeParam param) throws Exception {
     pjsua2JNI.Endpoint_handleIpChange(swigCPtr, this, IpChangeParam.getCPtr(param), param);
   }
 
@@ -300,6 +316,10 @@ public class Endpoint {
 
   public void onIpChangeProgress(OnIpChangeProgressParam prm) {
     if (getClass() == Endpoint.class) pjsua2JNI.Endpoint_onIpChangeProgress(swigCPtr, this, OnIpChangeProgressParam.getCPtr(prm), prm); else pjsua2JNI.Endpoint_onIpChangeProgressSwigExplicitEndpoint(swigCPtr, this, OnIpChangeProgressParam.getCPtr(prm), prm);
+  }
+
+  public void onMediaEvent(OnMediaEventParam prm) {
+    if (getClass() == Endpoint.class) pjsua2JNI.Endpoint_onMediaEvent(swigCPtr, this, OnMediaEventParam.getCPtr(prm), prm); else pjsua2JNI.Endpoint_onMediaEventSwigExplicitEndpoint(swigCPtr, this, OnMediaEventParam.getCPtr(prm), prm);
   }
 
 }

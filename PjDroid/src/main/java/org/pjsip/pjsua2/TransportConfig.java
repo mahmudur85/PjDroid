@@ -97,11 +97,11 @@ public class TransportConfig extends PersistentObject {
     this(pjsua2JNI.new_TransportConfig(), true);
   }
 
-  public void readObject(ContainerNode node) throws java.lang.Exception {
+  public void readObject(ContainerNode node) throws Exception {
     pjsua2JNI.TransportConfig_readObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 
-  public void writeObject(ContainerNode node) throws java.lang.Exception {
+  public void writeObject(ContainerNode node) throws Exception {
     pjsua2JNI.TransportConfig_writeObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 

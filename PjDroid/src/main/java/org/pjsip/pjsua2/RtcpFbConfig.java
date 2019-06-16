@@ -43,24 +43,24 @@ public class RtcpFbConfig extends PersistentObject {
     return pjsua2JNI.RtcpFbConfig_dontUseAvpf_get(swigCPtr, this);
   }
 
-  public void setCaps(SWIGTYPE_p_std__vectorT_pj__RtcpFbCap_t value) {
-    pjsua2JNI.RtcpFbConfig_caps_set(swigCPtr, this, SWIGTYPE_p_std__vectorT_pj__RtcpFbCap_t.getCPtr(value));
+  public void setCaps(RtcpFbCapVector value) {
+    pjsua2JNI.RtcpFbConfig_caps_set(swigCPtr, this, RtcpFbCapVector.getCPtr(value), value);
   }
 
-  public SWIGTYPE_p_std__vectorT_pj__RtcpFbCap_t getCaps() {
+  public RtcpFbCapVector getCaps() {
     long cPtr = pjsua2JNI.RtcpFbConfig_caps_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_std__vectorT_pj__RtcpFbCap_t(cPtr, false);
+    return (cPtr == 0) ? null : new RtcpFbCapVector(cPtr, false);
   }
 
   public RtcpFbConfig() {
     this(pjsua2JNI.new_RtcpFbConfig(), true);
   }
 
-  public void readObject(ContainerNode node) throws java.lang.Exception {
+  public void readObject(ContainerNode node) throws Exception {
     pjsua2JNI.RtcpFbConfig_readObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 
-  public void writeObject(ContainerNode node) throws java.lang.Exception {
+  public void writeObject(ContainerNode node) throws Exception {
     pjsua2JNI.RtcpFbConfig_writeObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 

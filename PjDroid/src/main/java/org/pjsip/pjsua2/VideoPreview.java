@@ -43,16 +43,20 @@ public class VideoPreview {
     return pjsua2JNI.VideoPreview_hasNative(swigCPtr, this);
   }
 
-  public void start(VideoPreviewOpParam param) throws java.lang.Exception {
+  public void start(VideoPreviewOpParam param) throws Exception {
     pjsua2JNI.VideoPreview_start(swigCPtr, this, VideoPreviewOpParam.getCPtr(param), param);
   }
 
-  public void stop() throws java.lang.Exception {
+  public void stop() throws Exception {
     pjsua2JNI.VideoPreview_stop(swigCPtr, this);
   }
 
   public VideoWindow getVideoWindow() {
     return new VideoWindow(pjsua2JNI.VideoPreview_getVideoWindow(swigCPtr, this), true);
+  }
+
+  public VideoMedia getVideoMedia() throws Exception {
+    return new VideoMedia(pjsua2JNI.VideoPreview_getVideoMedia(swigCPtr, this), true);
   }
 
 }

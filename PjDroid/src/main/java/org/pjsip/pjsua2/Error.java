@@ -8,7 +8,7 @@
 
 package org.pjsip.pjsua2;
 
-public class Error extends java.lang.Exception {
+public class Error extends Exception {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
