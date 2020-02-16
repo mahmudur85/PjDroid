@@ -55,35 +55,35 @@ public class AudioMediaPlayer extends AudioMedia {
     pjsua2JNI.AudioMediaPlayer_director_connect(this, swigCPtr, swigCMemOwn, true);
   }
 
-  public void createPlayer(String file_name, long options) throws Exception {
+  public void createPlayer(String file_name, long options) throws java.lang.Exception {
     pjsua2JNI.AudioMediaPlayer_createPlayer__SWIG_0(swigCPtr, this, file_name, options);
   }
 
-  public void createPlayer(String file_name) throws Exception {
+  public void createPlayer(String file_name) throws java.lang.Exception {
     pjsua2JNI.AudioMediaPlayer_createPlayer__SWIG_1(swigCPtr, this, file_name);
   }
 
-  public void createPlaylist(StringVector file_names, String label, long options) throws Exception {
+  public void createPlaylist(StringVector file_names, String label, long options) throws java.lang.Exception {
     pjsua2JNI.AudioMediaPlayer_createPlaylist__SWIG_0(swigCPtr, this, StringVector.getCPtr(file_names), file_names, label, options);
   }
 
-  public void createPlaylist(StringVector file_names, String label) throws Exception {
+  public void createPlaylist(StringVector file_names, String label) throws java.lang.Exception {
     pjsua2JNI.AudioMediaPlayer_createPlaylist__SWIG_1(swigCPtr, this, StringVector.getCPtr(file_names), file_names, label);
   }
 
-  public void createPlaylist(StringVector file_names) throws Exception {
+  public void createPlaylist(StringVector file_names) throws java.lang.Exception {
     pjsua2JNI.AudioMediaPlayer_createPlaylist__SWIG_2(swigCPtr, this, StringVector.getCPtr(file_names), file_names);
   }
 
-  public AudioMediaPlayerInfo getInfo() throws Exception {
+  public AudioMediaPlayerInfo getInfo() throws java.lang.Exception {
     return new AudioMediaPlayerInfo(pjsua2JNI.AudioMediaPlayer_getInfo(swigCPtr, this), true);
   }
 
-  public long getPos() throws Exception {
+  public long getPos() throws java.lang.Exception {
     return pjsua2JNI.AudioMediaPlayer_getPos(swigCPtr, this);
   }
 
-  public void setPos(long samples) throws Exception {
+  public void setPos(long samples) throws java.lang.Exception {
     pjsua2JNI.AudioMediaPlayer_setPos(swigCPtr, this, samples);
   }
 

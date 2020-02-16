@@ -107,11 +107,11 @@ public class AuthCredInfo extends PersistentObject {
     this(pjsua2JNI.new_AuthCredInfo__SWIG_1(scheme, realm, user_name, data_type, data), true);
   }
 
-  public void readObject(ContainerNode node) throws Exception {
+  public void readObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.AuthCredInfo_readObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 
-  public void writeObject(ContainerNode node) throws Exception {
+  public void writeObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.AuthCredInfo_writeObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 

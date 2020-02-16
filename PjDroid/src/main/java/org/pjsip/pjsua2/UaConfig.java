@@ -130,11 +130,11 @@ public class UaConfig extends PersistentObject {
     this(pjsua2JNI.new_UaConfig(), true);
   }
 
-  public void readObject(ContainerNode node) throws Exception {
+  public void readObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.UaConfig_readObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 
-  public void writeObject(ContainerNode node) throws Exception {
+  public void writeObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.UaConfig_writeObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 

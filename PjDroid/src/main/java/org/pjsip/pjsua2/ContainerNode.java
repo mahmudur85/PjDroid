@@ -39,99 +39,99 @@ public class ContainerNode {
     return pjsua2JNI.ContainerNode_hasUnread(swigCPtr, this);
   }
 
-  public String unreadName() throws Exception {
+  public String unreadName() throws java.lang.Exception {
     return pjsua2JNI.ContainerNode_unreadName(swigCPtr, this);
   }
 
-  public int readInt(String name) throws Exception {
+  public int readInt(String name) throws java.lang.Exception {
     return pjsua2JNI.ContainerNode_readInt__SWIG_0(swigCPtr, this, name);
   }
 
-  public int readInt() throws Exception {
+  public int readInt() throws java.lang.Exception {
     return pjsua2JNI.ContainerNode_readInt__SWIG_1(swigCPtr, this);
   }
 
-  public float readNumber(String name) throws Exception {
+  public float readNumber(String name) throws java.lang.Exception {
     return pjsua2JNI.ContainerNode_readNumber__SWIG_0(swigCPtr, this, name);
   }
 
-  public float readNumber() throws Exception {
+  public float readNumber() throws java.lang.Exception {
     return pjsua2JNI.ContainerNode_readNumber__SWIG_1(swigCPtr, this);
   }
 
-  public boolean readBool(String name) throws Exception {
+  public boolean readBool(String name) throws java.lang.Exception {
     return pjsua2JNI.ContainerNode_readBool__SWIG_0(swigCPtr, this, name);
   }
 
-  public boolean readBool() throws Exception {
+  public boolean readBool() throws java.lang.Exception {
     return pjsua2JNI.ContainerNode_readBool__SWIG_1(swigCPtr, this);
   }
 
-  public String readString(String name) throws Exception {
+  public String readString(String name) throws java.lang.Exception {
     return pjsua2JNI.ContainerNode_readString__SWIG_0(swigCPtr, this, name);
   }
 
-  public String readString() throws Exception {
+  public String readString() throws java.lang.Exception {
     return pjsua2JNI.ContainerNode_readString__SWIG_1(swigCPtr, this);
   }
 
-  public StringVector readStringVector(String name) throws Exception {
+  public StringVector readStringVector(String name) throws java.lang.Exception {
     return new StringVector(pjsua2JNI.ContainerNode_readStringVector__SWIG_0(swigCPtr, this, name), true);
   }
 
-  public StringVector readStringVector() throws Exception {
+  public StringVector readStringVector() throws java.lang.Exception {
     return new StringVector(pjsua2JNI.ContainerNode_readStringVector__SWIG_1(swigCPtr, this), true);
   }
 
-  public void readObject(PersistentObject obj) throws Exception {
+  public void readObject(PersistentObject obj) throws java.lang.Exception {
     pjsua2JNI.ContainerNode_readObject(swigCPtr, this, PersistentObject.getCPtr(obj), obj);
   }
 
-  public ContainerNode readContainer(String name) throws Exception {
+  public ContainerNode readContainer(String name) throws java.lang.Exception {
     return new ContainerNode(pjsua2JNI.ContainerNode_readContainer__SWIG_0(swigCPtr, this, name), true);
   }
 
-  public ContainerNode readContainer() throws Exception {
+  public ContainerNode readContainer() throws java.lang.Exception {
     return new ContainerNode(pjsua2JNI.ContainerNode_readContainer__SWIG_1(swigCPtr, this), true);
   }
 
-  public ContainerNode readArray(String name) throws Exception {
+  public ContainerNode readArray(String name) throws java.lang.Exception {
     return new ContainerNode(pjsua2JNI.ContainerNode_readArray__SWIG_0(swigCPtr, this, name), true);
   }
 
-  public ContainerNode readArray() throws Exception {
+  public ContainerNode readArray() throws java.lang.Exception {
     return new ContainerNode(pjsua2JNI.ContainerNode_readArray__SWIG_1(swigCPtr, this), true);
   }
 
-  public void writeNumber(String name, float num) throws Exception {
+  public void writeNumber(String name, float num) throws java.lang.Exception {
     pjsua2JNI.ContainerNode_writeNumber(swigCPtr, this, name, num);
   }
 
-  public void writeInt(String name, int num) throws Exception {
+  public void writeInt(String name, int num) throws java.lang.Exception {
     pjsua2JNI.ContainerNode_writeInt(swigCPtr, this, name, num);
   }
 
-  public void writeBool(String name, boolean value) throws Exception {
+  public void writeBool(String name, boolean value) throws java.lang.Exception {
     pjsua2JNI.ContainerNode_writeBool(swigCPtr, this, name, value);
   }
 
-  public void writeString(String name, String value) throws Exception {
+  public void writeString(String name, String value) throws java.lang.Exception {
     pjsua2JNI.ContainerNode_writeString(swigCPtr, this, name, value);
   }
 
-  public void writeStringVector(String name, StringVector arr) throws Exception {
+  public void writeStringVector(String name, StringVector arr) throws java.lang.Exception {
     pjsua2JNI.ContainerNode_writeStringVector(swigCPtr, this, name, StringVector.getCPtr(arr), arr);
   }
 
-  public void writeObject(PersistentObject obj) throws Exception {
+  public void writeObject(PersistentObject obj) throws java.lang.Exception {
     pjsua2JNI.ContainerNode_writeObject(swigCPtr, this, PersistentObject.getCPtr(obj), obj);
   }
 
-  public ContainerNode writeNewContainer(String name) throws Exception {
+  public ContainerNode writeNewContainer(String name) throws java.lang.Exception {
     return new ContainerNode(pjsua2JNI.ContainerNode_writeNewContainer(swigCPtr, this, name), true);
   }
 
-  public ContainerNode writeNewArray(String name) throws Exception {
+  public ContainerNode writeNewArray(String name) throws java.lang.Exception {
     return new ContainerNode(pjsua2JNI.ContainerNode_writeNewArray(swigCPtr, this, name), true);
   }
 

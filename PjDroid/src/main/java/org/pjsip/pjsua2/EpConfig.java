@@ -62,11 +62,11 @@ public class EpConfig extends PersistentObject {
     return (cPtr == 0) ? null : new MediaConfig(cPtr, false);
   }
 
-  public void readObject(ContainerNode node) throws Exception {
+  public void readObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.EpConfig_readObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 
-  public void writeObject(ContainerNode node) throws Exception {
+  public void writeObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.EpConfig_writeObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 

@@ -39,15 +39,15 @@ public class ToneGenerator extends AudioMedia {
     this(pjsua2JNI.new_ToneGenerator(), true);
   }
 
-  public void createToneGenerator(long clock_rate, long channel_count) throws Exception {
+  public void createToneGenerator(long clock_rate, long channel_count) throws java.lang.Exception {
     pjsua2JNI.ToneGenerator_createToneGenerator__SWIG_0(swigCPtr, this, clock_rate, channel_count);
   }
 
-  public void createToneGenerator(long clock_rate) throws Exception {
+  public void createToneGenerator(long clock_rate) throws java.lang.Exception {
     pjsua2JNI.ToneGenerator_createToneGenerator__SWIG_1(swigCPtr, this, clock_rate);
   }
 
-  public void createToneGenerator() throws Exception {
+  public void createToneGenerator() throws java.lang.Exception {
     pjsua2JNI.ToneGenerator_createToneGenerator__SWIG_2(swigCPtr, this);
   }
 
@@ -55,35 +55,35 @@ public class ToneGenerator extends AudioMedia {
     return pjsua2JNI.ToneGenerator_isBusy(swigCPtr, this);
   }
 
-  public void stop() throws Exception {
+  public void stop() throws java.lang.Exception {
     pjsua2JNI.ToneGenerator_stop(swigCPtr, this);
   }
 
-  public void rewind() throws Exception {
+  public void rewind() throws java.lang.Exception {
     pjsua2JNI.ToneGenerator_rewind(swigCPtr, this);
   }
 
-  public void play(ToneDescVector tones, boolean loop) throws Exception {
+  public void play(ToneDescVector tones, boolean loop) throws java.lang.Exception {
     pjsua2JNI.ToneGenerator_play__SWIG_0(swigCPtr, this, ToneDescVector.getCPtr(tones), tones, loop);
   }
 
-  public void play(ToneDescVector tones) throws Exception {
+  public void play(ToneDescVector tones) throws java.lang.Exception {
     pjsua2JNI.ToneGenerator_play__SWIG_1(swigCPtr, this, ToneDescVector.getCPtr(tones), tones);
   }
 
-  public void playDigits(ToneDigitVector digits, boolean loop) throws Exception {
+  public void playDigits(ToneDigitVector digits, boolean loop) throws java.lang.Exception {
     pjsua2JNI.ToneGenerator_playDigits__SWIG_0(swigCPtr, this, ToneDigitVector.getCPtr(digits), digits, loop);
   }
 
-  public void playDigits(ToneDigitVector digits) throws Exception {
+  public void playDigits(ToneDigitVector digits) throws java.lang.Exception {
     pjsua2JNI.ToneGenerator_playDigits__SWIG_1(swigCPtr, this, ToneDigitVector.getCPtr(digits), digits);
   }
 
-  public ToneDigitMapVector getDigitMap() throws Exception {
+  public ToneDigitMapVector getDigitMap() throws java.lang.Exception {
     return new ToneDigitMapVector(pjsua2JNI.ToneGenerator_getDigitMap(swigCPtr, this), true);
   }
 
-  public void setDigitMap(ToneDigitMapVector digit_map) throws Exception {
+  public void setDigitMap(ToneDigitMapVector digit_map) throws java.lang.Exception {
     pjsua2JNI.ToneGenerator_setDigitMap(swigCPtr, this, ToneDigitMapVector.getCPtr(digit_map), digit_map);
   }
 

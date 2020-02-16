@@ -55,11 +55,11 @@ public class Account {
     pjsua2JNI.Account_director_connect(this, swigCPtr, swigCMemOwn, true);
   }
 
-  public void create(AccountConfig cfg, boolean make_default) throws Exception {
+  public void create(AccountConfig cfg, boolean make_default) throws java.lang.Exception {
     pjsua2JNI.Account_create__SWIG_0(swigCPtr, this, AccountConfig.getCPtr(cfg), cfg, make_default);
   }
 
-  public void create(AccountConfig cfg) throws Exception {
+  public void create(AccountConfig cfg) throws java.lang.Exception {
     pjsua2JNI.Account_create__SWIG_1(swigCPtr, this, AccountConfig.getCPtr(cfg), cfg);
   }
 
@@ -67,7 +67,7 @@ public class Account {
     pjsua2JNI.Account_shutdown(swigCPtr, this);
   }
 
-  public void modify(AccountConfig cfg) throws Exception {
+  public void modify(AccountConfig cfg) throws java.lang.Exception {
     pjsua2JNI.Account_modify(swigCPtr, this, AccountConfig.getCPtr(cfg), cfg);
   }
 
@@ -75,7 +75,7 @@ public class Account {
     return pjsua2JNI.Account_isValid(swigCPtr, this);
   }
 
-  public void setDefault() throws Exception {
+  public void setDefault() throws java.lang.Exception {
     pjsua2JNI.Account_setDefault(swigCPtr, this);
   }
 
@@ -92,46 +92,62 @@ public class Account {
     return (cPtr == 0) ? null : new Account(cPtr, false);
   }
 
-  public AccountInfo getInfo() throws Exception {
+  public AccountInfo getInfo() throws java.lang.Exception {
     return new AccountInfo(pjsua2JNI.Account_getInfo(swigCPtr, this), true);
   }
 
-  public void setRegistration(boolean renew) throws Exception {
+  public void setRegistration(boolean renew) throws java.lang.Exception {
     pjsua2JNI.Account_setRegistration(swigCPtr, this, renew);
   }
 
-  public void setOnlineStatus(PresenceStatus pres_st) throws Exception {
+  public void setOnlineStatus(PresenceStatus pres_st) throws java.lang.Exception {
     pjsua2JNI.Account_setOnlineStatus(swigCPtr, this, PresenceStatus.getCPtr(pres_st), pres_st);
   }
 
-  public void setTransport(int tp_id) throws Exception {
+  public void setTransport(int tp_id) throws java.lang.Exception {
     pjsua2JNI.Account_setTransport(swigCPtr, this, tp_id);
   }
 
-  public void presNotify(PresNotifyParam prm) throws Exception {
+  public void presNotify(PresNotifyParam prm) throws java.lang.Exception {
     pjsua2JNI.Account_presNotify(swigCPtr, this, PresNotifyParam.getCPtr(prm), prm);
   }
 
-  public BuddyVector enumBuddies() throws Exception {
+  public BuddyVector enumBuddies() throws java.lang.Exception {
     return new BuddyVector(pjsua2JNI.Account_enumBuddies(swigCPtr, this), false);
   }
 
-  public BuddyVector2 enumBuddies2() throws Exception {
+  public BuddyVector2 enumBuddies2() throws java.lang.Exception {
     return new BuddyVector2(pjsua2JNI.Account_enumBuddies2(swigCPtr, this), true);
   }
 
-  public Buddy findBuddy(String uri, FindBuddyMatch buddy_match) throws Exception {
+  public Buddy findBuddy(String uri, FindBuddyMatch buddy_match) throws java.lang.Exception {
     long cPtr = pjsua2JNI.Account_findBuddy__SWIG_0(swigCPtr, this, uri, FindBuddyMatch.getCPtr(buddy_match), buddy_match);
     return (cPtr == 0) ? null : new Buddy(cPtr, false);
   }
 
-  public Buddy findBuddy(String uri) throws Exception {
+  public Buddy findBuddy(String uri) throws java.lang.Exception {
     long cPtr = pjsua2JNI.Account_findBuddy__SWIG_1(swigCPtr, this, uri);
     return (cPtr == 0) ? null : new Buddy(cPtr, false);
   }
 
-  public Buddy findBuddy2(String uri) throws Exception {
+  public Buddy findBuddy2(String uri) throws java.lang.Exception {
     return new Buddy(pjsua2JNI.Account_findBuddy2(swigCPtr, this, uri), true);
+  }
+
+  public boolean isZrtpUse() {
+    return pjsua2JNI.Account_isZrtpUse(swigCPtr, this);
+  }
+
+  public void setZrtpUse(boolean isUse) {
+    pjsua2JNI.Account_setZrtpUse(swigCPtr, this, isUse);
+  }
+
+  public String getZidFileName() {
+    return pjsua2JNI.Account_getZidFileName(swigCPtr, this);
+  }
+
+  public void setZidFileName(String fileName) {
+    pjsua2JNI.Account_setZidFileName(swigCPtr, this, fileName);
   }
 
   public void onIncomingCall(OnIncomingCallParam prm) {

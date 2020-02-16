@@ -76,11 +76,11 @@ public class AccountPresConfig extends PersistentObject {
     return pjsua2JNI.AccountPresConfig_pidfTupleId_get(swigCPtr, this);
   }
 
-  public void readObject(ContainerNode node) throws Exception {
+  public void readObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.AccountPresConfig_readObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 
-  public void writeObject(ContainerNode node) throws Exception {
+  public void writeObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.AccountPresConfig_writeObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 

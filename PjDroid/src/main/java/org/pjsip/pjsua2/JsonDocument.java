@@ -39,19 +39,19 @@ public class JsonDocument extends PersistentDocument {
     this(pjsua2JNI.new_JsonDocument(), true);
   }
 
-  public void loadFile(String filename) throws Exception {
+  public void loadFile(String filename) throws java.lang.Exception {
     pjsua2JNI.JsonDocument_loadFile(swigCPtr, this, filename);
   }
 
-  public void loadString(String input) throws Exception {
+  public void loadString(String input) throws java.lang.Exception {
     pjsua2JNI.JsonDocument_loadString(swigCPtr, this, input);
   }
 
-  public void saveFile(String filename) throws Exception {
+  public void saveFile(String filename) throws java.lang.Exception {
     pjsua2JNI.JsonDocument_saveFile(swigCPtr, this, filename);
   }
 
-  public String saveString() throws Exception {
+  public String saveString() throws java.lang.Exception {
     return pjsua2JNI.JsonDocument_saveString(swigCPtr, this);
   }
 

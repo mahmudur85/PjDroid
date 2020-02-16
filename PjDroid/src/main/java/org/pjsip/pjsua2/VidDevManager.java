@@ -31,7 +31,7 @@ public class VidDevManager {
     }
   }
 
-  public void refreshDevs() throws Exception {
+  public void refreshDevs() throws java.lang.Exception {
     pjsua2JNI.VidDevManager_refreshDevs(swigCPtr, this);
   }
 
@@ -39,19 +39,19 @@ public class VidDevManager {
     return pjsua2JNI.VidDevManager_getDevCount(swigCPtr, this);
   }
 
-  public VideoDevInfo getDevInfo(int dev_id) throws Exception {
+  public VideoDevInfo getDevInfo(int dev_id) throws java.lang.Exception {
     return new VideoDevInfo(pjsua2JNI.VidDevManager_getDevInfo(swigCPtr, this, dev_id), true);
   }
 
-  public VideoDevInfoVector enumDev() throws Exception {
+  public VideoDevInfoVector enumDev() throws java.lang.Exception {
     return new VideoDevInfoVector(pjsua2JNI.VidDevManager_enumDev(swigCPtr, this), false);
   }
 
-  public VideoDevInfoVector2 enumDev2() throws Exception {
+  public VideoDevInfoVector2 enumDev2() throws java.lang.Exception {
     return new VideoDevInfoVector2(pjsua2JNI.VidDevManager_enumDev2(swigCPtr, this), true);
   }
 
-  public int lookupDev(String drv_name, String dev_name) throws Exception {
+  public int lookupDev(String drv_name, String dev_name) throws java.lang.Exception {
     return pjsua2JNI.VidDevManager_lookupDev(swigCPtr, this, drv_name, dev_name);
   }
 
@@ -59,31 +59,31 @@ public class VidDevManager {
     return pjsua2JNI.VidDevManager_capName(swigCPtr, this, cap.swigValue());
   }
 
-  public void setFormat(int dev_id, MediaFormatVideo format, boolean keep) throws Exception {
+  public void setFormat(int dev_id, MediaFormatVideo format, boolean keep) throws java.lang.Exception {
     pjsua2JNI.VidDevManager_setFormat(swigCPtr, this, dev_id, MediaFormatVideo.getCPtr(format), format, keep);
   }
 
-  public MediaFormatVideo getFormat(int dev_id) throws Exception {
+  public MediaFormatVideo getFormat(int dev_id) throws java.lang.Exception {
     return new MediaFormatVideo(pjsua2JNI.VidDevManager_getFormat(swigCPtr, this, dev_id), true);
   }
 
-  public void setInputScale(int dev_id, MediaSize scale, boolean keep) throws Exception {
+  public void setInputScale(int dev_id, MediaSize scale, boolean keep) throws java.lang.Exception {
     pjsua2JNI.VidDevManager_setInputScale(swigCPtr, this, dev_id, MediaSize.getCPtr(scale), scale, keep);
   }
 
-  public MediaSize getInputScale(int dev_id) throws Exception {
+  public MediaSize getInputScale(int dev_id) throws java.lang.Exception {
     return new MediaSize(pjsua2JNI.VidDevManager_getInputScale(swigCPtr, this, dev_id), true);
   }
 
-  public void setOutputWindowFlags(int dev_id, int flags, boolean keep) throws Exception {
+  public void setOutputWindowFlags(int dev_id, int flags, boolean keep) throws java.lang.Exception {
     pjsua2JNI.VidDevManager_setOutputWindowFlags(swigCPtr, this, dev_id, flags, keep);
   }
 
-  public int getOutputWindowFlags(int dev_id) throws Exception {
+  public int getOutputWindowFlags(int dev_id) throws java.lang.Exception {
     return pjsua2JNI.VidDevManager_getOutputWindowFlags(swigCPtr, this, dev_id);
   }
 
-  public void switchDev(int dev_id, VideoSwitchParam param) throws Exception {
+  public void switchDev(int dev_id, VideoSwitchParam param) throws java.lang.Exception {
     pjsua2JNI.VidDevManager_switchDev(swigCPtr, this, dev_id, VideoSwitchParam.getCPtr(param), param);
   }
 
@@ -91,11 +91,11 @@ public class VidDevManager {
     return pjsua2JNI.VidDevManager_isCaptureActive(swigCPtr, this, dev_id);
   }
 
-  public void setCaptureOrient(int dev_id, pjmedia_orient orient, boolean keep) throws Exception {
+  public void setCaptureOrient(int dev_id, pjmedia_orient orient, boolean keep) throws java.lang.Exception {
     pjsua2JNI.VidDevManager_setCaptureOrient__SWIG_0(swigCPtr, this, dev_id, orient.swigValue(), keep);
   }
 
-  public void setCaptureOrient(int dev_id, pjmedia_orient orient) throws Exception {
+  public void setCaptureOrient(int dev_id, pjmedia_orient orient) throws java.lang.Exception {
     pjsua2JNI.VidDevManager_setCaptureOrient__SWIG_1(swigCPtr, this, dev_id, orient.swigValue());
   }
 

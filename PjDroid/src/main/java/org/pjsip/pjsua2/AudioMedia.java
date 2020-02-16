@@ -35,7 +35,7 @@ public class AudioMedia extends Media {
     super.delete();
   }
 
-  public ConfPortInfo getPortInfo() throws Exception {
+  public ConfPortInfo getPortInfo() throws java.lang.Exception {
     return new ConfPortInfo(pjsua2JNI.AudioMedia_getPortInfo(swigCPtr, this), true);
   }
 
@@ -43,35 +43,35 @@ public class AudioMedia extends Media {
     return pjsua2JNI.AudioMedia_getPortId(swigCPtr, this);
   }
 
-  public static ConfPortInfo getPortInfoFromId(int port_id) throws Exception {
+  public static ConfPortInfo getPortInfoFromId(int port_id) throws java.lang.Exception {
     return new ConfPortInfo(pjsua2JNI.AudioMedia_getPortInfoFromId(port_id), true);
   }
 
-  public void startTransmit(AudioMedia sink) throws Exception {
+  public void startTransmit(AudioMedia sink) throws java.lang.Exception {
     pjsua2JNI.AudioMedia_startTransmit(swigCPtr, this, AudioMedia.getCPtr(sink), sink);
   }
 
-  public void startTransmit2(AudioMedia sink, AudioMediaTransmitParam param) throws Exception {
+  public void startTransmit2(AudioMedia sink, AudioMediaTransmitParam param) throws java.lang.Exception {
     pjsua2JNI.AudioMedia_startTransmit2(swigCPtr, this, AudioMedia.getCPtr(sink), sink, AudioMediaTransmitParam.getCPtr(param), param);
   }
 
-  public void stopTransmit(AudioMedia sink) throws Exception {
+  public void stopTransmit(AudioMedia sink) throws java.lang.Exception {
     pjsua2JNI.AudioMedia_stopTransmit(swigCPtr, this, AudioMedia.getCPtr(sink), sink);
   }
 
-  public void adjustRxLevel(float level) throws Exception {
+  public void adjustRxLevel(float level) throws java.lang.Exception {
     pjsua2JNI.AudioMedia_adjustRxLevel(swigCPtr, this, level);
   }
 
-  public void adjustTxLevel(float level) throws Exception {
+  public void adjustTxLevel(float level) throws java.lang.Exception {
     pjsua2JNI.AudioMedia_adjustTxLevel(swigCPtr, this, level);
   }
 
-  public long getRxLevel() throws Exception {
+  public long getRxLevel() throws java.lang.Exception {
     return pjsua2JNI.AudioMedia_getRxLevel(swigCPtr, this);
   }
 
-  public long getTxLevel() throws Exception {
+  public long getTxLevel() throws java.lang.Exception {
     return pjsua2JNI.AudioMedia_getTxLevel(swigCPtr, this);
   }
 

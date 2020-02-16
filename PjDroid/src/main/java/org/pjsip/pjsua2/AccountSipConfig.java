@@ -101,11 +101,11 @@ public class AccountSipConfig extends PersistentObject {
     return pjsua2JNI.AccountSipConfig_transportId_get(swigCPtr, this);
   }
 
-  public void readObject(ContainerNode node) throws Exception {
+  public void readObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.AccountSipConfig_readObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 
-  public void writeObject(ContainerNode node) throws Exception {
+  public void writeObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.AccountSipConfig_writeObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 

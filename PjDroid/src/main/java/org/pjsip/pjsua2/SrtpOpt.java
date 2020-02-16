@@ -57,11 +57,11 @@ public class SrtpOpt extends PersistentObject {
     this(pjsua2JNI.new_SrtpOpt(), true);
   }
 
-  public void readObject(ContainerNode node) throws Exception {
+  public void readObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.SrtpOpt_readObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 
-  public void writeObject(ContainerNode node) throws Exception {
+  public void writeObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.SrtpOpt_writeObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 

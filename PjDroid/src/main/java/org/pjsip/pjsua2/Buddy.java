@@ -55,7 +55,7 @@ public class Buddy {
     pjsua2JNI.Buddy_director_connect(this, swigCPtr, swigCMemOwn, true);
   }
 
-  public void create(Account acc, BuddyConfig cfg) throws Exception {
+  public void create(Account acc, BuddyConfig cfg) throws java.lang.Exception {
     pjsua2JNI.Buddy_create(swigCPtr, this, Account.getCPtr(acc), acc, BuddyConfig.getCPtr(cfg), cfg);
   }
 
@@ -63,23 +63,23 @@ public class Buddy {
     return pjsua2JNI.Buddy_isValid(swigCPtr, this);
   }
 
-  public BuddyInfo getInfo() throws Exception {
+  public BuddyInfo getInfo() throws java.lang.Exception {
     return new BuddyInfo(pjsua2JNI.Buddy_getInfo(swigCPtr, this), true);
   }
 
-  public void subscribePresence(boolean subscribe) throws Exception {
+  public void subscribePresence(boolean subscribe) throws java.lang.Exception {
     pjsua2JNI.Buddy_subscribePresence(swigCPtr, this, subscribe);
   }
 
-  public void updatePresence() throws Exception {
+  public void updatePresence() throws java.lang.Exception {
     pjsua2JNI.Buddy_updatePresence(swigCPtr, this);
   }
 
-  public void sendInstantMessage(SendInstantMessageParam prm) throws Exception {
+  public void sendInstantMessage(SendInstantMessageParam prm) throws java.lang.Exception {
     pjsua2JNI.Buddy_sendInstantMessage(swigCPtr, this, SendInstantMessageParam.getCPtr(prm), prm);
   }
 
-  public void sendTypingIndication(SendTypingIndicationParam prm) throws Exception {
+  public void sendTypingIndication(SendTypingIndicationParam prm) throws java.lang.Exception {
     pjsua2JNI.Buddy_sendTypingIndication(swigCPtr, this, SendTypingIndicationParam.getCPtr(prm), prm);
   }
 

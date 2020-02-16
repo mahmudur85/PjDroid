@@ -51,11 +51,11 @@ public class BuddyConfig extends PersistentObject {
     return pjsua2JNI.BuddyConfig_subscribe_get(swigCPtr, this);
   }
 
-  public void readObject(ContainerNode node) throws Exception {
+  public void readObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.BuddyConfig_readObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 
-  public void writeObject(ContainerNode node) throws Exception {
+  public void writeObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.BuddyConfig_writeObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 

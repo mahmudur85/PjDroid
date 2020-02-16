@@ -59,11 +59,11 @@ public class AccountIpChangeConfig {
     return pjsua2JNI.AccountIpChangeConfig_reinviteFlags_get(swigCPtr, this);
   }
 
-  public void readObject(ContainerNode node) throws Exception {
+  public void readObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.AccountIpChangeConfig_readObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 
-  public void writeObject(ContainerNode node) throws Exception {
+  public void writeObject(ContainerNode node) throws java.lang.Exception {
     pjsua2JNI.AccountIpChangeConfig_writeObject(swigCPtr, this, ContainerNode.getCPtr(node), node);
   }
 

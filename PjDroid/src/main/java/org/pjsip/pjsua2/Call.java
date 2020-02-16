@@ -60,7 +60,7 @@ public class Call {
     pjsua2JNI.Call_director_connect(this, swigCPtr, swigCMemOwn, true);
   }
 
-  public CallInfo getInfo() throws Exception {
+  public CallInfo getInfo() throws java.lang.Exception {
     return new CallInfo(pjsua2JNI.Call_getInfo(swigCPtr, this), true);
   }
 
@@ -86,15 +86,15 @@ public class Call {
     return (cPtr == 0) ? null : new Media(cPtr, false);
   }
 
-  public AudioMedia getAudioMedia(int med_idx) throws Exception {
+  public AudioMedia getAudioMedia(int med_idx) throws java.lang.Exception {
     return new AudioMedia(pjsua2JNI.Call_getAudioMedia(swigCPtr, this, med_idx), true);
   }
 
-  public VideoMedia getEncodingVideoMedia(int med_idx) throws Exception {
+  public VideoMedia getEncodingVideoMedia(int med_idx) throws java.lang.Exception {
     return new VideoMedia(pjsua2JNI.Call_getEncodingVideoMedia(swigCPtr, this, med_idx), true);
   }
 
-  public VideoMedia getDecodingVideoMedia(int med_idx) throws Exception {
+  public VideoMedia getDecodingVideoMedia(int med_idx) throws java.lang.Exception {
     return new VideoMedia(pjsua2JNI.Call_getDecodingVideoMedia(swigCPtr, this, med_idx), true);
   }
 
@@ -111,67 +111,67 @@ public class Call {
     return (cPtr == 0) ? null : new SWIGTYPE_p_void(cPtr, false);
   }
 
-  public pj_stun_nat_type getRemNatType() throws Exception {
+  public pj_stun_nat_type getRemNatType() throws java.lang.Exception {
     return pj_stun_nat_type.swigToEnum(pjsua2JNI.Call_getRemNatType(swigCPtr, this));
   }
 
-  public void makeCall(String dst_uri, CallOpParam prm) throws Exception {
+  public void makeCall(String dst_uri, CallOpParam prm) throws java.lang.Exception {
     pjsua2JNI.Call_makeCall(swigCPtr, this, dst_uri, CallOpParam.getCPtr(prm), prm);
   }
 
-  public void answer(CallOpParam prm) throws Exception {
+  public void answer(CallOpParam prm) throws java.lang.Exception {
     pjsua2JNI.Call_answer(swigCPtr, this, CallOpParam.getCPtr(prm), prm);
   }
 
-  public void hangup(CallOpParam prm) throws Exception {
+  public void hangup(CallOpParam prm) throws java.lang.Exception {
     pjsua2JNI.Call_hangup(swigCPtr, this, CallOpParam.getCPtr(prm), prm);
   }
 
-  public void setHold(CallOpParam prm) throws Exception {
+  public void setHold(CallOpParam prm) throws java.lang.Exception {
     pjsua2JNI.Call_setHold(swigCPtr, this, CallOpParam.getCPtr(prm), prm);
   }
 
-  public void reinvite(CallOpParam prm) throws Exception {
+  public void reinvite(CallOpParam prm) throws java.lang.Exception {
     pjsua2JNI.Call_reinvite(swigCPtr, this, CallOpParam.getCPtr(prm), prm);
   }
 
-  public void update(CallOpParam prm) throws Exception {
+  public void update(CallOpParam prm) throws java.lang.Exception {
     pjsua2JNI.Call_update(swigCPtr, this, CallOpParam.getCPtr(prm), prm);
   }
 
-  public void xfer(String dest, CallOpParam prm) throws Exception {
+  public void xfer(String dest, CallOpParam prm) throws java.lang.Exception {
     pjsua2JNI.Call_xfer(swigCPtr, this, dest, CallOpParam.getCPtr(prm), prm);
   }
 
-  public void xferReplaces(Call dest_call, CallOpParam prm) throws Exception {
+  public void xferReplaces(Call dest_call, CallOpParam prm) throws java.lang.Exception {
     pjsua2JNI.Call_xferReplaces(swigCPtr, this, Call.getCPtr(dest_call), dest_call, CallOpParam.getCPtr(prm), prm);
   }
 
-  public void processRedirect(pjsip_redirect_op cmd) throws Exception {
+  public void processRedirect(pjsip_redirect_op cmd) throws java.lang.Exception {
     pjsua2JNI.Call_processRedirect(swigCPtr, this, cmd.swigValue());
   }
 
-  public void dialDtmf(String digits) throws Exception {
+  public void dialDtmf(String digits) throws java.lang.Exception {
     pjsua2JNI.Call_dialDtmf(swigCPtr, this, digits);
   }
 
-  public void sendDtmf(CallSendDtmfParam param) throws Exception {
+  public void sendDtmf(CallSendDtmfParam param) throws java.lang.Exception {
     pjsua2JNI.Call_sendDtmf(swigCPtr, this, CallSendDtmfParam.getCPtr(param), param);
   }
 
-  public void sendInstantMessage(SendInstantMessageParam prm) throws Exception {
+  public void sendInstantMessage(SendInstantMessageParam prm) throws java.lang.Exception {
     pjsua2JNI.Call_sendInstantMessage(swigCPtr, this, SendInstantMessageParam.getCPtr(prm), prm);
   }
 
-  public void sendTypingIndication(SendTypingIndicationParam prm) throws Exception {
+  public void sendTypingIndication(SendTypingIndicationParam prm) throws java.lang.Exception {
     pjsua2JNI.Call_sendTypingIndication(swigCPtr, this, SendTypingIndicationParam.getCPtr(prm), prm);
   }
 
-  public void sendRequest(CallSendRequestParam prm) throws Exception {
+  public void sendRequest(CallSendRequestParam prm) throws java.lang.Exception {
     pjsua2JNI.Call_sendRequest(swigCPtr, this, CallSendRequestParam.getCPtr(prm), prm);
   }
 
-  public String dump(boolean with_media, String indent) throws Exception {
+  public String dump(boolean with_media, String indent) throws java.lang.Exception {
     return pjsua2JNI.Call_dump(swigCPtr, this, with_media, indent);
   }
 
@@ -183,19 +183,19 @@ public class Call {
     return pjsua2JNI.Call_vidStreamIsRunning(swigCPtr, this, med_idx, dir.swigValue());
   }
 
-  public void vidSetStream(pjsua_call_vid_strm_op op, CallVidSetStreamParam param) throws Exception {
+  public void vidSetStream(pjsua_call_vid_strm_op op, CallVidSetStreamParam param) throws java.lang.Exception {
     pjsua2JNI.Call_vidSetStream(swigCPtr, this, op.swigValue(), CallVidSetStreamParam.getCPtr(param), param);
   }
 
-  public StreamInfo getStreamInfo(long med_idx) throws Exception {
+  public StreamInfo getStreamInfo(long med_idx) throws java.lang.Exception {
     return new StreamInfo(pjsua2JNI.Call_getStreamInfo(swigCPtr, this, med_idx), true);
   }
 
-  public StreamStat getStreamStat(long med_idx) throws Exception {
+  public StreamStat getStreamStat(long med_idx) throws java.lang.Exception {
     return new StreamStat(pjsua2JNI.Call_getStreamStat(swigCPtr, this, med_idx), true);
   }
 
-  public MediaTransportInfo getMedTransportInfo(long med_idx) throws Exception {
+  public MediaTransportInfo getMedTransportInfo(long med_idx) throws java.lang.Exception {
     return new MediaTransportInfo(pjsua2JNI.Call_getMedTransportInfo(swigCPtr, this, med_idx), true);
   }
 
@@ -205,6 +205,38 @@ public class Call {
 
   public void processStateChange(OnCallStateParam prm) {
     pjsua2JNI.Call_processStateChange(swigCPtr, this, OnCallStateParam.getCPtr(prm), prm);
+  }
+
+  public ZrtpStateInfo getZrtpStateInfo() throws java.lang.Exception {
+    return new ZrtpStateInfo(pjsua2JNI.Call_getZrtpStateInfo(swigCPtr, this), true);
+  }
+
+  public String callSecureMediaInfo() throws java.lang.Exception {
+    return pjsua2JNI.Call_callSecureMediaInfo(swigCPtr, this);
+  }
+
+  public void zrtpSASVerified() throws java.lang.Exception {
+    pjsua2JNI.Call_zrtpSASVerified(swigCPtr, this);
+  }
+
+  public void zrtpSASRevoked() throws java.lang.Exception {
+    pjsua2JNI.Call_zrtpSASRevoked(swigCPtr, this);
+  }
+
+  public void zrtpEnable(boolean onoff) throws java.lang.Exception {
+    pjsua2JNI.Call_zrtpEnable(swigCPtr, this, onoff);
+  }
+
+  public boolean zrtpIsEnable() throws java.lang.Exception {
+    return pjsua2JNI.Call_zrtpIsEnable(swigCPtr, this);
+  }
+
+  public void zrtpStart() throws java.lang.Exception {
+    pjsua2JNI.Call_zrtpStart(swigCPtr, this);
+  }
+
+  public void zrtpStop() throws java.lang.Exception {
+    pjsua2JNI.Call_zrtpStop(swigCPtr, this);
   }
 
   public void onCallState(OnCallStateParam prm) {
@@ -293,6 +325,22 @@ public class Call {
 
   public void onCreateMediaTransportSrtp(OnCreateMediaTransportSrtpParam prm) {
     if (getClass() == Call.class) pjsua2JNI.Call_onCreateMediaTransportSrtp(swigCPtr, this, OnCreateMediaTransportSrtpParam.getCPtr(prm), prm); else pjsua2JNI.Call_onCreateMediaTransportSrtpSwigExplicitCall(swigCPtr, this, OnCreateMediaTransportSrtpParam.getCPtr(prm), prm);
+  }
+
+  public void onZrtpShowSAS(OnZrtpShowSASParam prm) {
+    if (getClass() == Call.class) pjsua2JNI.Call_onZrtpShowSAS(swigCPtr, this, OnZrtpShowSASParam.getCPtr(prm), prm); else pjsua2JNI.Call_onZrtpShowSASSwigExplicitCall(swigCPtr, this, OnZrtpShowSASParam.getCPtr(prm), prm);
+  }
+
+  public void onZrtpUpdateTransport(OnZrtpUpdateTransportParam prm) {
+    if (getClass() == Call.class) pjsua2JNI.Call_onZrtpUpdateTransport(swigCPtr, this, OnZrtpUpdateTransportParam.getCPtr(prm), prm); else pjsua2JNI.Call_onZrtpUpdateTransportSwigExplicitCall(swigCPtr, this, OnZrtpUpdateTransportParam.getCPtr(prm), prm);
+  }
+
+  public void onZrtpNegotiationFailed(OnZrtpNegotiationFailedParam prm) {
+    if (getClass() == Call.class) pjsua2JNI.Call_onZrtpNegotiationFailed(swigCPtr, this, OnZrtpNegotiationFailedParam.getCPtr(prm), prm); else pjsua2JNI.Call_onZrtpNegotiationFailedSwigExplicitCall(swigCPtr, this, OnZrtpNegotiationFailedParam.getCPtr(prm), prm);
+  }
+
+  public void onZrtpNotSupportedOther(OnZrtpNotSupportedOtherParam prm) {
+    if (getClass() == Call.class) pjsua2JNI.Call_onZrtpNotSupportedOther(swigCPtr, this, OnZrtpNotSupportedOtherParam.getCPtr(prm), prm); else pjsua2JNI.Call_onZrtpNotSupportedOtherSwigExplicitCall(swigCPtr, this, OnZrtpNotSupportedOtherParam.getCPtr(prm), prm);
   }
 
 }
