@@ -1,4 +1,4 @@
-[ ![Download](https://api.bintray.com/packages/mahmudur85/maven/PjDroid/images/download.svg) ](https://bintray.com/mahmudur85/maven/PjDroid/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/mahmudur85/maven/PjDroid/images/download.svg?version=2.1.0) ](https://bintray.com/mahmudur85/maven/PjDroid/2.1.0/link)
 
 # PjDroid [experimental]
 
@@ -8,7 +8,7 @@ PJSIP PJSUA2 api library for Android
 
 Add this to your app's build.gradle file in dependencies
 
-`implementation 'com.mahmudur85.lib:PjDroid:2.0.0'`
+`implementation 'com.mahmudur85.lib:PjDroid:2.1.0'`
 
 ## How run the [sample](https://github.com/mahmudur85/PjDroid/tree/master/sample) project
 
