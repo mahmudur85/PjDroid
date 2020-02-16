@@ -20,6 +20,8 @@ Supported architectures
 
 - amreabi-v7a
 - arm64-v8a
+- x86
+- x86_x64
 
 Supported Transport
 
@@ -31,8 +33,7 @@ Supports SRTP
 
 ## TODO
 
-- ~~Support for x86 & x86_x64 architectures~~
-- ~~Video Call support~~
+- ZRTP Support
 
 ## License
 
