@@ -35,7 +35,7 @@ Supports SRTP
 
 ## TODO
 
-- ZRTP Support
+~~- ZRTP Support~~
 
 ## License
 
