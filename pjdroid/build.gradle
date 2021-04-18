@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/mahmudur85/PjDroid'
     gitUrl = 'https://github.com/mahmudur85/PjDroid.git'
 
-    libraryVersion = '2.2.01'
+    libraryVersion = '2.2.1'
     libraryCode = 20201
 
     developerId = 'mahmudur85'
