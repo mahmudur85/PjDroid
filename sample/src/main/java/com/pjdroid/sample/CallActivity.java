@@ -123,7 +123,7 @@ public class CallActivity extends AppCompatActivity
         WindowManager wm;
         Display display;
         int rotation;
-        pjmedia_orient orient;
+        int orient;
 
         wm = (WindowManager)this.getSystemService(Context.WINDOW_SERVICE);
         display = wm.getDefaultDisplay();
@@ -320,8 +320,8 @@ public class CallActivity extends AppCompatActivity
             buttonAccept.setVisibility(View.GONE);
         }
 
-        if (ci.getState().swigValue() <
-                pjsip_inv_state.PJSIP_INV_STATE_CONFIRMED.swigValue())
+        if (ci.getState() <
+                pjsip_inv_state.PJSIP_INV_STATE_CONFIRMED)
         {
             if (ci.getRole() == pjsip_role_e.PJSIP_ROLE_UAS) {
                 call_state = "Incoming call..";
@@ -331,8 +331,8 @@ public class CallActivity extends AppCompatActivity
                 call_state = ci.getStateText();
             }
         }
-        else if (ci.getState().swigValue() >=
-                pjsip_inv_state.PJSIP_INV_STATE_CONFIRMED.swigValue())
+        else if (ci.getState() >=
+                pjsip_inv_state.PJSIP_INV_STATE_CONFIRMED)
         {
             buttonAccept.setVisibility(View.GONE);
             call_state = ci.getStateText();

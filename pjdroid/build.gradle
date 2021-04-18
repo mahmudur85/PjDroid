@@ -1,0 +1,143 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'maven-publish'
+
+ext {
+    publishedGroupId = 'com.github.libraries'
+    libraryName = 'pjdroid'
+    artifact = 'pjdroid'
+
+    libraryDescription = 'An Android Library for PJSIP PJSUA2 API.'
+
+    siteUrl = 'https://github.com/mahmudur85/PjDroid'
+    gitUrl = 'https://github.com/mahmudur85/PjDroid.git'
+
+    libraryVersion = '2.2.0'
+    libraryCode = 20200
+
+    developerId = 'mahmudur85'
+    developerName = 'Khandker Mahmudur Rahman'
+    developerEmail = 'mahmudur85@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+ext.versions = [
+        'minSdk'        : 19,
+        'compileSdk'    : 29,
+        'targetSdk'     : 29,
+        'buildTools'    : '29.0.2',
+
+        'release'       : libraryVersion,
+        'code'          : libraryCode,
+]
+
+android {
+    buildToolsVersion = versions.buildTools
+    android {
+        compileSdkVersion versions.compileSdk
+        buildToolsVersion versions.buildTools
+
+        defaultConfig {
+            minSdkVersion versions.minSdk
+            targetSdkVersion versions.targetSdk
+
+            versionCode versions.code
+            versionName versions.release
+        }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+}
+
+group = publishedGroupId
+version = libraryVersion
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+def getVersionName = { ->
+    return libraryVersion
+}
+
+def getArtifactId = { ->
+    return artifact
+}
+
+def getGroupId = { ->
+    return publishedGroupId
+}
+
+def getGitHubUrl = { ->
+    return "https://maven.pkg.github.com/mahmudur85/PjDroid"
+}
+
+publishing {
+    publications {
+        bar(MavenPublication) {
+            groupId getGroupId()
+            artifactId getArtifactId()
+            version getVersionName()
+            artifact("$buildDir/outputs/aar/${getArtifactId()}-release.aar")
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GitHubPackages" //libraryName
+            url = uri(getGitHubUrl())
+
+            credentials {
+                username = properties['gpr.usr'] ?: System.getenv("GPR_USER")
+                password = properties['gpr.key'] ?: System.getenv("GPR_API_KEY")
+            }
+        }
+    }
+}
+
+/*bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+
+    configurations = ['archives']
+    pkg {
+        repo = bintrayRepo
+        name = bintrayName
+        desc = libraryDescription
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = allLicenses
+        dryRun = false
+        publish = true
+        override = false
+        publicDownloadNumbers = true
+        version {
+            desc = libraryDescription
+        }
+    }
+}*/

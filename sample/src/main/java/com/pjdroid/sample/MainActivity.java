@@ -565,8 +565,8 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    public void notifyRegState(pjsip_status_code code, String reason,
-                               int expiration)
+    public void notifyRegState(int code, String reason,
+                               long expiration)
     {
         String msg_str = "";
         if (expiration == 0)
@@ -574,7 +574,7 @@ public class MainActivity extends AppCompatActivity
         else
             msg_str += "Registration";
 
-        if (code.swigValue()/100 == 2)
+        if (code/100 == 2)
             msg_str += " successful";
         else
             msg_str += " failed: " + reason;

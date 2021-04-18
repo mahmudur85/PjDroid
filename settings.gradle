@@ -1,1 +1,2 @@
-include ':sample', ':PjDroid'
+include ':sample', ':pjdroid'
+rootProject.name = "PjDroid Library"

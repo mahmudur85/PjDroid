@@ -8,8 +8,7 @@ import org.pjsip.pjsua2.*;
 /* Interface to separate UI & engine a bit better */
 interface MyAppObserver
 {
-    abstract void notifyRegState(pjsip_status_code code, String reason,
-                                 int expiration);
+    abstract void notifyRegState(int code, String reason, long expiration);
     abstract void notifyIncomingCall(MyCall call);
     abstract void notifyCallState(MyCall call);
     abstract void notifyCallMediaState(MyCall call);
@@ -334,8 +333,8 @@ class MyApp {
         logWriter = new MyLogWriter();
         log_cfg.setWriter(logWriter);
         log_cfg.setDecor(log_cfg.getDecor() &
-                ~(pj_log_decoration.PJ_LOG_HAS_CR.swigValue() |
-                        pj_log_decoration.PJ_LOG_HAS_NEWLINE.swigValue()));
+                ~(pj_log_decoration.PJ_LOG_HAS_CR |
+                        pj_log_decoration.PJ_LOG_HAS_NEWLINE));
 
         /* Write log to file (just uncomment whenever needed) */
         //String log_path = android.os.Environment.getExternalStorageDirectory().toString();
