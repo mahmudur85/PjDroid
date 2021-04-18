@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 
+apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'maven-publish'
 
 ext {
@@ -12,8 +13,8 @@ ext {
     siteUrl = 'https://github.com/mahmudur85/PjDroid'
     gitUrl = 'https://github.com/mahmudur85/PjDroid.git'
 
-    libraryVersion = '2.2.0'
-    libraryCode = 20200
+    libraryVersion = '2.2.01'
+    libraryCode = 20201
 
     developerId = 'mahmudur85'
     developerName = 'Khandker Mahmudur Rahman'
