@@ -1,7 +1,6 @@
 apply plugin: 'com.android.library'
 
 apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'maven-publish'
 
 ext {
     publishedGroupId = 'com.github.libraries'
@@ -78,67 +77,3 @@ artifacts {
     archives javadocJar
     archives sourcesJar
 }
-
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-def getVersionName = { ->
-    return libraryVersion
-}
-
-def getArtifactId = { ->
-    return artifact
-}
-
-def getGroupId = { ->
-    return publishedGroupId
-}
-
-def getGitHubUrl = { ->
-    return "https://maven.pkg.github.com/mahmudur85/PjDroid"
-}
-
-publishing {
-    publications {
-        bar(MavenPublication) {
-            groupId getGroupId()
-            artifactId getArtifactId()
-            version getVersionName()
-            artifact("$buildDir/outputs/aar/${getArtifactId()}-release.aar")
-        }
-    }
-
-    repositories {
-        maven {
-            name = "GitHubPackages" //libraryName
-            url = uri(getGitHubUrl())
-
-            credentials {
-                username = properties['gpr.usr'] ?: System.getenv("GPR_USER")
-                password = properties['gpr.key'] ?: System.getenv("GPR_API_KEY")
-            }
-        }
-    }
-}
-
-/*bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
-
-    configurations = ['archives']
-    pkg {
-        repo = bintrayRepo
-        name = bintrayName
-        desc = libraryDescription
-        websiteUrl = siteUrl
-        vcsUrl = gitUrl
-        licenses = allLicenses
-        dryRun = false
-        publish = true
-        override = false
-        publicDownloadNumbers = true
-        version {
-            desc = libraryDescription
-        }
-    }
-}*/
