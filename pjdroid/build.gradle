@@ -1,62 +1,28 @@
-apply plugin: 'com.android.library'
-
-apply plugin: 'com.github.dcendents.android-maven'
-
-ext {
-    publishedGroupId = 'com.github.libraries'
-    libraryName = 'pjdroid'
-    artifact = 'pjdroid'
-
-    libraryDescription = 'An Android Library for PJSIP PJSUA2 API.'
-
-    siteUrl = 'https://github.com/mahmudur85/PjDroid'
-    gitUrl = 'https://github.com/mahmudur85/PjDroid.git'
-
-    libraryVersion = '2.2.1'
-    libraryCode = 20201
-
-    developerId = 'mahmudur85'
-    developerName = 'Khandker Mahmudur Rahman'
-    developerEmail = 'mahmudur85@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'com.vanniktech.maven.publish'
 }
-
-ext.versions = [
-        'minSdk'        : 19,
-        'compileSdk'    : 29,
-        'targetSdk'     : 29,
-        'buildTools'    : '29.0.2',
-
-        'release'       : libraryVersion,
-        'code'          : libraryCode,
-]
 
 android {
-    buildToolsVersion = versions.buildTools
-    android {
-        compileSdkVersion versions.compileSdk
-        buildToolsVersion versions.buildTools
 
-        defaultConfig {
-            minSdkVersion versions.minSdk
-            targetSdkVersion versions.targetSdk
+    compileSdkVersion deps.build.sdk.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
-            versionCode versions.code
-            versionName versions.release
-        }
+    defaultConfig {
+        minSdkVersion deps.build.sdk.minSdkVersion
+        targetSdkVersion deps.build.sdk.targetSdkVersion
 
-        compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_8
-            targetCompatibility JavaVersion.VERSION_1_8
-        }
+        versionCode 20203
+        version = "2.2.3"
+        versionName "$version"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
-
-group = publishedGroupId
-version = libraryVersion
 
 task sourcesJar(type: Jar) {
     classifier = 'sources'

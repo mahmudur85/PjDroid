@@ -1,16 +1,19 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
 
 android {
-    compileSdkVersion 28
-
-
+    compileSdkVersion deps.build.sdk.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         applicationId "com.pjdroid.sample"
-        minSdkVersion 21
-        targetSdkVersion 28
+        minSdkVersion deps.build.sdk.minSdkVersion
+        targetSdkVersion deps.build.sdk.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        version = "10000"
+        versionName "$version Sample"
 
     }
 
@@ -25,11 +28,20 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    buildFeatures {
+        dataBinding true
+        // viewBinding true
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation "androidx.appcompat:appcompat:$apcompatVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayout"
     implementation project(':pjdroid')
 }
