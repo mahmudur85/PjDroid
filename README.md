@@ -1,4 +1,4 @@
-[ ![Download](https://api.bintray.com/packages/mahmudur85/maven/PjDroid/images/download.svg?version=2.1.0) ](https://bintray.com/mahmudur85/maven/PjDroid/2.1.0/link)
+[![Download](https://maven-badges.herokuapp.com/maven-central/com.pjdroid/pjdroid/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.pjdroid/pjdroid)
 
 # PjDroid [experimental]
 
@@ -8,7 +8,7 @@ PJSIP PJSUA2 api library for Android
 
 Add this to your app's build.gradle file in dependencies
 
-`implementation 'com.mahmudur85.lib:PjDroid:2.1.0'`
+`implementation "com.pjdroid:pjdroid:2.2.3"`
 
 ## How run the [sample](https://github.com/mahmudur85/PjDroid/tree/master/sample) project
 
@@ -16,7 +16,7 @@ This [issue](https://github.com/mahmudur85/PjDroid/issues/1) might help to run t
 
 ## Feature
 
-Build from PJSIP-2.9
+Build from PJSIP-2.10
 
 Supported architectures
 
@@ -31,11 +31,7 @@ Supported Transport
 - TCP
 - TLS
 
-Supports SRTP
-
-## TODO
-
-~~- ZRTP Support~~
+Supports SRTP, ZRTP
 
 ## License
 
