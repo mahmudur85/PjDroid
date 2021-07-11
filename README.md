@@ -1,6 +1,6 @@
 [![Download](https://maven-badges.herokuapp.com/maven-central/com.pjdroid/pjdroid/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.pjdroid/pjdroid)
 
-# PjDroid [experimental]
+# PjDroid
 
 PJSIP PJSUA2 api library for Android
 
@@ -8,7 +8,11 @@ PJSIP PJSUA2 api library for Android
 
 Add this to your app's build.gradle file in dependencies
 
+```bash
 `implementation "com.pjdroid:pjdroid:2.2.3"`
+```
+
+
 
 ## How run the [sample](https://github.com/mahmudur85/PjDroid/tree/master/sample) project
 
