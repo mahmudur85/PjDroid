@@ -9,7 +9,7 @@ PJSIP PJSUA2 api library for Android
 Add this to your app's build.gradle file in dependencies
 
 ```bash
-`implementation "com.pjdroid:pjdroid:2.2.3"`
+implementation "com.pjdroid:pjdroid:2.2.3"
 ```
 
 
