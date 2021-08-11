@@ -1,6 +1,5 @@
 package com.pjdroid.sample
 
-import com.pjdroid.sample.MyApp
 import org.pjsip.pjsua2.*
 import java.io.File
 import java.util.*
@@ -202,25 +201,10 @@ internal class MyAccountConfig {
 }
 
 class MyApp {
+
     companion object {
         var ep: Endpoint? = Endpoint()
         var observer: MyAppObserver? = null
-
-        init {
-            try {
-                System.loadLibrary("openh264")
-                // Ticket #1937: libyuv is now included as static lib
-                //System.loadLibrary("yuv");
-            } catch (e: UnsatisfiedLinkError) {
-                println("UnsatisfiedLinkError: " + e.message)
-                println(
-                    "This could be safely ignored if you " +
-                            "don't need video."
-                )
-            }
-            System.loadLibrary("pjsua2")
-            println("Library loaded")
-        }
     }
 
     @JvmField

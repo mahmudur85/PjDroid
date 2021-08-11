@@ -126,6 +126,54 @@ public class StreamInfo {
     return (cPtr == 0) ? null : new VidCodecParam(cPtr, false);
   }
 
+  public void setJbInit(int value) {
+    pjsua2JNI.StreamInfo_jbInit_set(swigCPtr, this, value);
+  }
+
+  public int getJbInit() {
+    return pjsua2JNI.StreamInfo_jbInit_get(swigCPtr, this);
+  }
+
+  public void setJbMinPre(int value) {
+    pjsua2JNI.StreamInfo_jbMinPre_set(swigCPtr, this, value);
+  }
+
+  public int getJbMinPre() {
+    return pjsua2JNI.StreamInfo_jbMinPre_get(swigCPtr, this);
+  }
+
+  public void setJbMaxPre(int value) {
+    pjsua2JNI.StreamInfo_jbMaxPre_set(swigCPtr, this, value);
+  }
+
+  public int getJbMaxPre() {
+    return pjsua2JNI.StreamInfo_jbMaxPre_get(swigCPtr, this);
+  }
+
+  public void setJbMax(int value) {
+    pjsua2JNI.StreamInfo_jbMax_set(swigCPtr, this, value);
+  }
+
+  public int getJbMax() {
+    return pjsua2JNI.StreamInfo_jbMax_get(swigCPtr, this);
+  }
+
+  public void setJbDiscardAlgo(SWIGTYPE_p_pjmedia_jb_discard_algo value) {
+    pjsua2JNI.StreamInfo_jbDiscardAlgo_set(swigCPtr, this, SWIGTYPE_p_pjmedia_jb_discard_algo.getCPtr(value));
+  }
+
+  public SWIGTYPE_p_pjmedia_jb_discard_algo getJbDiscardAlgo() {
+    return new SWIGTYPE_p_pjmedia_jb_discard_algo(pjsua2JNI.StreamInfo_jbDiscardAlgo_get(swigCPtr, this), true);
+  }
+
+  public void setRtcpSdesByeDisabled(boolean value) {
+    pjsua2JNI.StreamInfo_rtcpSdesByeDisabled_set(swigCPtr, this, value);
+  }
+
+  public boolean getRtcpSdesByeDisabled() {
+    return pjsua2JNI.StreamInfo_rtcpSdesByeDisabled_get(swigCPtr, this);
+  }
+
   public StreamInfo() {
     this(pjsua2JNI.new_StreamInfo(), true);
   }

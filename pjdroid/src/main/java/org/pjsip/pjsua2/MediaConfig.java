@@ -204,6 +204,14 @@ public class MediaConfig extends PersistentObject {
     return pjsua2JNI.MediaConfig_jbMax_get(swigCPtr, this);
   }
 
+  public void setJbDiscardAlgo(SWIGTYPE_p_pjmedia_jb_discard_algo value) {
+    pjsua2JNI.MediaConfig_jbDiscardAlgo_set(swigCPtr, this, SWIGTYPE_p_pjmedia_jb_discard_algo.getCPtr(value));
+  }
+
+  public SWIGTYPE_p_pjmedia_jb_discard_algo getJbDiscardAlgo() {
+    return new SWIGTYPE_p_pjmedia_jb_discard_algo(pjsua2JNI.MediaConfig_jbDiscardAlgo_get(swigCPtr, this), true);
+  }
+
   public void setSndAutoCloseTime(int value) {
     pjsua2JNI.MediaConfig_sndAutoCloseTime_set(swigCPtr, this, value);
   }

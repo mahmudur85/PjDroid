@@ -10,7 +10,8 @@ package org.pjsip.pjsua2;
 
 public final class pjmedia_srtp_use {
   public final static int PJMEDIA_SRTP_DISABLED = 0;
-  public final static int PJMEDIA_SRTP_OPTIONAL = PJMEDIA_SRTP_DISABLED + 1;
+  public final static int PJMEDIA_SRTP_UNKNOWN = PJMEDIA_SRTP_DISABLED;
+  public final static int PJMEDIA_SRTP_OPTIONAL = PJMEDIA_SRTP_UNKNOWN + 1;
   public final static int PJMEDIA_SRTP_MANDATORY = PJMEDIA_SRTP_OPTIONAL + 1;
 }
 

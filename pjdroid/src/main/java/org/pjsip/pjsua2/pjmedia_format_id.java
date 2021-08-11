@@ -31,6 +31,7 @@ public final class pjmedia_format_id {
   public final static int PJMEDIA_FORMAT_I420 = ((('0' << 24)|('2' << 16))|('4' << 8))|'I';
   public final static int PJMEDIA_FORMAT_IYUV = PJMEDIA_FORMAT_I420;
   public final static int PJMEDIA_FORMAT_YV12 = ((('2' << 24)|('1' << 16))|('V' << 8))|'Y';
+  public final static int PJMEDIA_FORMAT_NV12 = ((('2' << 24)|('1' << 16))|('V' << 8))|'N';
   public final static int PJMEDIA_FORMAT_NV21 = ((('1' << 24)|('2' << 16))|('V' << 8))|'N';
   public final static int PJMEDIA_FORMAT_I422 = ((('2' << 24)|('2' << 16))|('4' << 8))|'I';
   public final static int PJMEDIA_FORMAT_I420JPEG = ((('0' << 24)|('2' << 16))|('4' << 8))|'J';
@@ -39,9 +40,12 @@ public final class pjmedia_format_id {
   public final static int PJMEDIA_FORMAT_H263 = ((('3' << 24)|('6' << 16))|('2' << 8))|'H';
   public final static int PJMEDIA_FORMAT_H263P = ((('3' << 24)|('6' << 16))|('2' << 8))|'P';
   public final static int PJMEDIA_FORMAT_H264 = ((('4' << 24)|('6' << 16))|('2' << 8))|'H';
+  public final static int PJMEDIA_FORMAT_VP8 = ((('0' << 24)|('8' << 16))|('P' << 8))|'V';
+  public final static int PJMEDIA_FORMAT_VP9 = ((('0' << 24)|('9' << 16))|('P' << 8))|'V';
   public final static int PJMEDIA_FORMAT_MJPEG = ((('G' << 24)|('P' << 16))|('J' << 8))|'M';
   public final static int PJMEDIA_FORMAT_MPEG1VIDEO = ((('V' << 24)|('1' << 16))|('P' << 8))|'M';
   public final static int PJMEDIA_FORMAT_MPEG2VIDEO = ((('V' << 24)|('2' << 16))|('P' << 8))|'M';
   public final static int PJMEDIA_FORMAT_MPEG4 = ((('4' << 24)|('G' << 16))|('P' << 8))|'M';
+  public final static int PJMEDIA_FORMAT_INVALID = 0xFFFFFFFF;
 }
 
