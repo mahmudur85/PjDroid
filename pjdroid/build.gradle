@@ -14,7 +14,7 @@ android {
         targetSdkVersion deps.build.sdk.targetSdkVersion
 
         versionCode 20203
-        version = "2.2.3"
+        version = "2.2.4"
         versionName "$version"
     }
 
