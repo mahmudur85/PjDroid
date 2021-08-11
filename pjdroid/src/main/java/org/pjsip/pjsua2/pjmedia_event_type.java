@@ -22,5 +22,6 @@ public final class pjmedia_event_type {
   public final static int PJMEDIA_EVENT_AUD_DEV_ERROR = ((('R' << 24)|('R' << 16))|('E' << 8))|'A';
   public final static int PJMEDIA_EVENT_VID_DEV_ERROR = ((('R' << 24)|('R' << 16))|('E' << 8))|'V';
   public final static int PJMEDIA_EVENT_MEDIA_TP_ERR = ((('R' << 24)|('R' << 16))|('E' << 8))|'T';
+  public final static int PJMEDIA_EVENT_CALLBACK = (((' ' << 24)|(' ' << 16))|('B' << 8))|'C';
 }
 

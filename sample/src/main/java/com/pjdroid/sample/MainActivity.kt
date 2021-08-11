@@ -15,7 +15,6 @@ import android.view.View
 import android.widget.*
 import android.widget.AdapterView.OnItemClickListener
 import androidx.appcompat.app.AppCompatActivity
-import com.pjdroid.sample.CallActivity
 import org.pjsip.pjsua2.*
 import java.util.*
 
@@ -43,25 +42,29 @@ class MainActivity : AppCompatActivity(), Handler.Callback, MyAppObserver {
         }
 
         private fun isNetworkChange(context: Context): Boolean {
-            var network_changed = false
-            val connectivity_mgr = context.getSystemService(
+            var networkChanged = false
+            val connectivityManager = context.getSystemService(
                 CONNECTIVITY_SERVICE
             ) as ConnectivityManager
-            val net_info = connectivity_mgr.activeNetworkInfo
-            if (net_info != null && net_info.isConnectedOrConnecting &&
+            val netInfo = connectivityManager.activeNetworkInfo
+            if (netInfo != null && netInfo.isConnectedOrConnecting &&
                 !conn_name.equals("", ignoreCase = true)
             ) {
-                val new_con = net_info.extraInfo
+                val new_con = netInfo.extraInfo
                 if (new_con != null && !new_con.equals(
                         conn_name,
                         ignoreCase = true
                     )
-                ) network_changed = true
+                ) networkChanged = true
                 conn_name = new_con ?: ""
             } else {
-                if (conn_name.equals("", ignoreCase = true)) conn_name = net_info!!.extraInfo
+                if (conn_name.equals("", ignoreCase = true)) {
+                    netInfo?.extraInfo?.let {
+                        conn_name = it
+                    }
+                }
             }
-            return network_changed
+            return networkChanged
         }
     }
 

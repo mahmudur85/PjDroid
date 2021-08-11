@@ -68,6 +68,14 @@ public class AccountNatConfig extends PersistentObject {
     return pjsua2JNI.AccountNatConfig_iceEnabled_get(swigCPtr, this);
   }
 
+  public void setIceTrickle(int value) {
+    pjsua2JNI.AccountNatConfig_iceTrickle_set(swigCPtr, this, value);
+  }
+
+  public int getIceTrickle() {
+    return pjsua2JNI.AccountNatConfig_iceTrickle_get(swigCPtr, this);
+  }
+
   public void setIceMaxHostCands(int value) {
     pjsua2JNI.AccountNatConfig_iceMaxHostCands_set(swigCPtr, this, value);
   }

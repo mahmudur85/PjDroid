@@ -15,6 +15,7 @@ public final class pjsip_ssl_method {
   public final static int PJSIP_TLSV1_METHOD = 31;
   public final static int PJSIP_TLSV1_1_METHOD = 32;
   public final static int PJSIP_TLSV1_2_METHOD = 33;
+  public final static int PJSIP_TLSV1_3_METHOD = 34;
   public final static int PJSIP_SSLV23_METHOD = 23;
 }
 

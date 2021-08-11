@@ -19,6 +19,7 @@ public final class pjmedia_vid_dev_cap {
   public final static int PJMEDIA_VID_DEV_CAP_ORIENTATION = 128;
   public final static int PJMEDIA_VID_DEV_CAP_SWITCH = 256;
   public final static int PJMEDIA_VID_DEV_CAP_OUTPUT_WINDOW_FLAGS = 512;
+  public final static int PJMEDIA_VID_DEV_CAP_OUTPUT_FULLSCREEN = 1024;
   public final static int PJMEDIA_VID_DEV_CAP_MAX = 16384;
 }
 
