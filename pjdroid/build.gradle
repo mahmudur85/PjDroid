@@ -13,7 +13,7 @@ android {
         minSdkVersion deps.build.sdk.minSdkVersion
         targetSdkVersion deps.build.sdk.targetSdkVersion
 
-        versionCode 20203
+        versionCode 20204
         version = "2.2.4"
         versionName "$version"
     }
